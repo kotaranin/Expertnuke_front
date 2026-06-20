@@ -34,7 +34,7 @@ export const questions = [
         text: "Da li postoji nalog da se snaga podigne u narednih 2 sata?",
         type: "select",
         options: [
-            { value: true, label: "Da - planira se podizanje snage;" },
+            { value: true, label: "Da - planira se podizanje snage." },
             { value: false, label: "Ne - reaktor ostaje na niskoj snazi ili ide na gašenje." },
         ],
         next: (value) => "P3"
@@ -54,8 +54,8 @@ export const questions = [
         text: "Da li se beleži sporiji ulazak kontrolnih šipki u jezgro?",
         type: "select",
         options: [
-            { value: "NORMAL", label: "Ne, šipke ulaze normalnom brzinom;" },
-            { value: "SLOW", label: "Da, primetno usporenje jedne ili više šipki;" },
+            { value: "NORMAL", label: "Ne, šipke ulaze normalnom brzinom." },
+            { value: "SLOW", label: "Da, primetno usporenje jedne ili više šipki." },
             { value: "STUCK", label: "Jedna ili više šipki zaglavljene, ne ulaze u jezgro." },
         ],
         next: (value) => "P4"
@@ -84,8 +84,8 @@ export const questions = [
         text: "Da li je ventil za smanjenje pritiska otvoren ili se zaglavio u otvorenom položaju?",
         type: "select",
         options: [
-            { value: "NORMAL", label: "Ventil radi normalno - pritisak se kontrolisano smanjuje;" },
-            { value: "STUCK_OPEN", label: "Ventil zaglavio u otvorenom položaju;" },
+            { value: "NORMAL", label: "Ventil radi normalno - pritisak se kontrolisano smanjuje." },
+            { value: "STUCK_OPEN", label: "Ventil zaglavio u otvorenom položaju." },
             { value: "NON_RESPONSIVE", label: "Ventil ne reaguje - ostaje zatvoren uprkos komandi." },
         ],
         next: (value) => "P5"
@@ -121,9 +121,9 @@ export const questions = [
         text: "Da li su sve pumpe primarnog rashladnog kola operativne?",
         type: "select",
         options: [
-            { value: "ALL_FUNCTIONAL", label: "Da - sve pumpe rade nominalno;" },
-            { value: "ONE_MALFUNCTIONED", label: "Jedna pumpa je otkazala ili radi ispod kapaciteta;" },
-            { value: "MULTIPLE_MALFUNCTIONED", label: "Dve ili više pumpi su otkazale;" },
+            { value: "ALL_FUNCTIONAL", label: "Da - sve pumpe rade nominalno." },
+            { value: "ONE_MALFUNCTIONED", label: "Jedna pumpa je otkazala ili radi ispod kapaciteta." },
+            { value: "MULTIPLE_MALFUNCTIONED", label: "Dve ili više pumpi su otkazale." },
             { value: "ALL_MALFUNCTIONED", label: "Sve pumpe su izgubile napajanje." },
         ],
         next: (value) => (value == "ALL_MALFUNCTIONED") ? "P8a" : "P6"
@@ -134,8 +134,8 @@ export const questions = [
         text: "Koliki je nivo rashladne vode u reaktorskom sudu?",
         type: "select",
         options: [
-            { value: "NORMAL", label: "Normalan nivo;" },
-            { value: "DECREASED", label: "Snižen - između 10% i 25% ispod normale;" },
+            { value: "NORMAL", label: "Normalan nivo." },
+            { value: "DECREASED", label: "Snižen - između 10% i 25% ispod normale." },
             { value: "CRITICALLY_DECREASED", label: "Kritično snižen - više od 25% ispod normale ili nivo i dalje pada." },
         ],
         next: (value) => (value == "DECREASED") ? "P4b" : "P7"
@@ -146,7 +146,7 @@ export const questions = [
         text: "Da li je reaktor trenutno u toku planiranog testa, eksperimenta ili nestandardne procedure?",
         type: "select",
         options: [
-            { value: true, label: "Da;" },
+            { value: true, label: "Da." },
             { value: false, label: "Ne." },
         ],
         next: (value) => (value) ? "P7a" : "P8"
@@ -169,8 +169,8 @@ export const questions = [
         text: "Da li je spoljašnje električno napajanje postrojenja trenutno dostupno?",
         type: "select",
         options: [
-            { value: "AVAILABLE", label: "Da - napajanje sa mreže stabilno;" },
-            { value: "PARTIALLY_LOST", label: "Delimično izgubljeno - jedan od dva nezavisna voda;" },
+            { value: "AVAILABLE", label: "Da - napajanje sa mreže stabilno." },
+            { value: "PARTIALLY_LOST", label: "Delimično izgubljeno - jedan od dva nezavisna voda." },
             { value: "FULLY_LOST", label: "Potpuno izgubljeno - oba napajanja izgubljena." },
         ],
         next: (value) => (value == "AVAILABLE") ? "P9" : "P8a"
@@ -205,7 +205,7 @@ export const questions = [
         text: "Da li detektori radioaktivnih gasova beleže porast u ventilacionim kanalima reaktorske zgrade?",
         type: "select",
         options: [
-            { value: true, label: "Da - detektovano curenje radioaktivnih gasova;" },
+            { value: true, label: "Da - detektovano curenje radioaktivnih gasova." },
             { value: false, label: "Ne - gasovi u normalnom opsegu." },
         ],
         next: (value) => (value) ? "P10b" : null
@@ -216,8 +216,8 @@ export const questions = [
         text: "Da li je aktivitet joda-131 u rashladnoj vodi povišen za više od 100 puta u odnosu na nominalnu vrednost?",
         type: "select",
         options: [
-            { value: "YES", label: "Da - potvrđeno oštećenje gorivnih elemenata;" },
-            { value: "POSSIBLY", label: "Moguće - blago povišen aktivitet bez potvrde;" },
+            { value: "YES", label: "Da - potvrđeno oštećenje gorivnih elemenata." },
+            { value: "POSSIBLY", label: "Moguće - blago povišen aktivitet bez potvrde." },
             { value: "NO", label: "Ne - aktivitet u normalnom opsegu." },
         ],
         next: (value) => null
