@@ -20,6 +20,7 @@ function QuestionForm({ question, onAnswer, onNext }) {
                             onChange={(e) => setNumberValue(e.target.value)}
                             min={question.min}
                             max={question.max}
+                            step="any"
                             className="bg-reactor-bg border-2 border-reactor-border text-reactor-green px-4 py-2 text-lg focus:outline-none focus:border-reactor-green"
                             autoFocus
                         />
