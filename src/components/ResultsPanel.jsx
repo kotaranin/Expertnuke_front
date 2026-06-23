@@ -23,7 +23,12 @@ function ResultsPanel({ recommendations }) {
 
                 <div className="flex flex-col gap-4">
                     {recommendations.map((rec) => (
-                        <RecommendationCard key={rec.code} code={rec.code} explanation={rec.explanation} />
+                        <RecommendationCard
+                            key={rec.code}
+                            code={rec.code}
+                            name={rec.name}
+                            description={rec.description}
+                            explanation={rec.explanation} />
                     ))}
                 </div>
             </div>
