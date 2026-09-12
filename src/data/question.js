@@ -6,7 +6,7 @@ export const questions = [
         type: "select",
         options: [
             { value: "RBMK", label: "RBMK (grafitom moderiran)" },
-            { value: "VVER_PWR", label: "VVER/PWR (vodom moderiran i hlađen)" },
+            { value: "PWR", label: "PWR (vodom moderiran i hlađen)" },
             { value: "BWR", label: "BWR (kipuća voda, zapadni dizajn)" },
         ],
         next: () => "P2"
