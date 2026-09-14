@@ -68,9 +68,9 @@ export const questions = [
         min: 0,
         next: (value, allAnswers) => {
             const limits = {
-                RBMK: 80,
-                VVER_PWR: 165,
-                BWR: 85,
+                RBMK: 70,
+                PWR: 155,
+                BWR: 70,
             };
             const upperLimit = limits[allAnswers.reactorType];
             if (value > upperLimit * 1.05) return "P4a";
@@ -107,8 +107,8 @@ export const questions = [
         next: (value, allAnswers) => {
             const limits = {
                 RBMK: 284,
-                VVER_PWR: 320,
-                BWR: 286,
+                PWR: 327,
+                BWR: 285,
             };
             const upperLimit = limits[allAnswers.reactorType];
             if (value > upperLimit + 5 && value < upperLimit + 15) return "P5a";
